@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #dc3545;
+  --additional-color: #00adef;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -144,6 +145,14 @@ img {
   opacity: 0.9;
   background: var(--light-color);
   color: #333;
+}
+
+.btn-additional,
+.bg-additional,
+.badge-additional,
+.alert-additional {
+  background: var(--additional-color);
+  color: #fff;
 }
 
 .btn-primary,

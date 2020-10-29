@@ -1,1 +1,40 @@
-<nav></nav>
+<nav class="navbar bg-primary">
+  <h1>
+    <a
+      routerLink="/user
+    "
+      >Buy & Drive</a
+    >
+  </h1>
+
+  <!-- *ngIf="auth.isAuthenticated()" -->
+  <!-- (click)="logout($event)" -->
+
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="['/user']">Главная</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'all-cars']">Просмотр автомобилей</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'all-spares']">Просмотр автозапчастей</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'all-spares']">Создать объявление</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'all-spares']">Ваши объявления</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'contacts']">Контакты</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/user', 'auth']">Выйти</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

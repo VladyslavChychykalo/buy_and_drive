@@ -12,6 +12,9 @@ import { FilterCarsComponent } from './filter-cars/filter-cars.component';
 import { FilterSparesComponent } from './filter-spares/filter-spares.component';
 import { PostCarComponent } from './post-car/post-car.component';
 import { PostSpareComponent } from './post-spare/post-spare.component';
+import { AuthPageComponent } from './auth-page/auth-page.component';
+import { ContactsComponent } from '../shared/components/contacts/contacts.component';
+import { CarsSparesSearchComponent } from './cars-spares-search/cars-spares-search.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { PostSpareComponent } from './post-spare/post-spare.component';
     AllSparesComponent,
     FilterCarsComponent,
     FilterSparesComponent,
+    AuthPageComponent,
+    CarsSparesSearchComponent,
   ],
   imports: [
     CommonModule,
@@ -31,13 +36,15 @@ import { PostSpareComponent } from './post-spare/post-spare.component';
         path: '',
         component: MainLayoutComponent,
         children: [
-          { path: '', redirectTo: '', pathMatch: 'full' },
+          { path: '', redirectTo: '/main', pathMatch: 'full' },
           { path: 'all-cars', component: AllCarsComponent },
           { path: 'all-spares', component: AllSparesComponent },
           { path: 'user-sign-in', component: UserSignInComponent },
           { path: 'user-sign-up', component: UserSignUpComponent },
           { path: 'post-card/:id', component: PostCarComponent },
           { path: 'post-spare/:id', component: PostSpareComponent },
+          { path: 'contacts', component: ContactsComponent },
+          { path: 'auth', component: AuthPageComponent },
         ],
       },
     ]),

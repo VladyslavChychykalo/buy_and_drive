@@ -1,5 +1,27 @@
-<nav class="navbar main">
-  <h1>Buy and Drive</h1>
+<nav class="navbar bg-additional">
+  <h1>
+    <a routerLink="/">Buy & Drive</a>
+  </h1>
+
+  <!-- *ngIf="auth.isAuthenticated()" -->
+  <!-- (click)="logout($event)" -->
+
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="['/main']">Главная</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/main', 'cars_spares_search']"
+        >Просмотр автомобилей и автозапчастей</a
+      >
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/main', 'contacts']">Контакты</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/main', 'auth']">Войти</a>
+    </li>
+  </ul>
 </nav>
 
 <div class="container">
