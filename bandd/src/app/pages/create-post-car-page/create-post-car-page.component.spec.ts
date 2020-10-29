@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreatePostSpareComponent } from './create-post-spare.component';
+import { CreatePostCarPageComponent } from './create-post-car-page.component';
 
-describe('CreatePostSpareComponent', () => {
-  let component: CreatePostSpareComponent;
-  let fixture: ComponentFixture<CreatePostSpareComponent>;
+describe('CreatePostCarPageComponent', () => {
+  let component: CreatePostCarPageComponent;
+  let fixture: ComponentFixture<CreatePostCarPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreatePostSpareComponent ]
+      declarations: [ CreatePostCarPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreatePostSpareComponent);
+    fixture = TestBed.createComponent(CreatePostCarPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

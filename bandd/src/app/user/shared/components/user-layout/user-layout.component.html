@@ -7,24 +7,20 @@
     >
   </h1>
 
-  <!-- *ngIf="auth.isAuthenticated()" -->
-  <!-- (click)="logout($event)" -->
-
   <ul>
     <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <a [routerLink]="['/user']">Главная</a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/user', 'all-cars']">Просмотр автомобилей</a>
+      <a [routerLink]="['/user', 'cars-spares-search']"
+        >Просмотр автомобилей и автозапчастей</a
+      >
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/user', 'all-spares']">Просмотр автозапчастей</a>
+      <a [routerLink]="['/user', 'create-advertisment']">Создать объявление</a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/user', 'all-spares']">Создать объявление</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/user', 'all-spares']">Ваши объявления</a>
+      <a [routerLink]="['/user', 'your-advertisment']">Ваши объявления</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['/user', 'contacts']">Контакты</a>
