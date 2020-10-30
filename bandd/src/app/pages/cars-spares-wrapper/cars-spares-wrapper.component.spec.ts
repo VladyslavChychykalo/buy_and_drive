@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CarsSparesSearchComponent } from './cars-spares-search.component';
+import { CarsSparesWrapperComponent } from './cars-spares-wrapper.component';
 
-describe('CarsSparesSearchComponent', () => {
-  let component: CarsSparesSearchComponent;
-  let fixture: ComponentFixture<CarsSparesSearchComponent>;
+describe('CarsSparesWrapperComponent', () => {
+  let component: CarsSparesWrapperComponent;
+  let fixture: ComponentFixture<CarsSparesWrapperComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CarsSparesSearchComponent ]
+      declarations: [ CarsSparesWrapperComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CarsSparesSearchComponent);
+    fixture = TestBed.createComponent(CarsSparesWrapperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

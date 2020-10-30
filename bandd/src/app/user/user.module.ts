@@ -10,13 +10,7 @@ import { CreatePostSparePageComponent } from '../pages/create-post-spare-page/cr
 import { YourAdvdertisementPageComponent } from '../pages/your-advdertisement-page/your-advdertisement-page.component';
 
 @NgModule({
-  declarations: [
-    UserLayoutComponent,
-    CreateAdvertisementPageComponent,
-    CreatePostCarPageComponent,
-    CreatePostSparePageComponent,
-    YourAdvdertisementPageComponent,
-  ],
+  declarations: [UserLayoutComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([

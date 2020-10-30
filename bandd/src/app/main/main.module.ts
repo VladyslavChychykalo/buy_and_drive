@@ -6,28 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
 import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
-import { AllCarsComponent } from './all-cars/all-cars.component';
-import { AllSparesComponent } from './all-spares/all-spares.component';
-import { FilterCarsComponent } from './filter-cars/filter-cars.component';
-import { FilterSparesComponent } from './filter-spares/filter-spares.component';
-import { PostCarComponent } from './post-car/post-car.component';
-import { PostSpareComponent } from './post-spare/post-spare.component';
-import { AuthPageComponent } from './auth-page/auth-page.component';
 import { ContactsComponent } from '../shared/components/contacts/contacts.component';
-import { CarsSparesSearchComponent } from './cars-spares-search/cars-spares-search.component';
+import { CarsSparesWrapperComponent } from '../pages/cars-spares-wrapper/cars-spares-wrapper.component';
+import { AllSparesComponent } from '../pages/all-spares/all-spares.component';
+import { PostCarComponent } from '../pages/post-car/post-car.component';
+import { PostSpareComponent } from '../pages/post-spare/post-spare.component';
+import { AllCarsComponent } from '../pages/all-cars/all-cars.component';
 
 @NgModule({
-  declarations: [
-    MainLayoutComponent,
-    UserSignInComponent,
-    UserSignUpComponent,
-    AllCarsComponent,
-    AllSparesComponent,
-    FilterCarsComponent,
-    FilterSparesComponent,
-    AuthPageComponent,
-    CarsSparesSearchComponent,
-  ],
+  declarations: [MainLayoutComponent, UserSignInComponent, UserSignUpComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -37,14 +24,14 @@ import { CarsSparesSearchComponent } from './cars-spares-search/cars-spares-sear
         component: MainLayoutComponent,
         children: [
           { path: '', redirectTo: '/main', pathMatch: 'full' },
+          { path: 'cars-spares-search', component: CarsSparesWrapperComponent },
           { path: 'all-cars', component: AllCarsComponent },
           { path: 'all-spares', component: AllSparesComponent },
           { path: 'user-sign-in', component: UserSignInComponent },
           { path: 'user-sign-up', component: UserSignUpComponent },
-          { path: 'post-card/:id', component: PostCarComponent },
+          { path: 'post-car/:id', component: PostCarComponent },
           { path: 'post-spare/:id', component: PostSpareComponent },
           { path: 'contacts', component: ContactsComponent },
-          { path: 'auth', component: AuthPageComponent },
         ],
       },
     ]),

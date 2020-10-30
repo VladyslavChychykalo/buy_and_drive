@@ -1,0 +1,12 @@
+<div>
+  <app-filter-cars></app-filter-cars>
+  <div class="cars-list">
+    <ul *ngFor="let car of carsList">
+      <li>
+        <a [routerLink]="['/', activeUrl[0], 'post-car', car.id]"
+          >Подробная информация</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
