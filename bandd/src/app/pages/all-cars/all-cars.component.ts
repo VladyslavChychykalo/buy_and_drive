@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-cars',
@@ -15,7 +13,7 @@ export class AllCarsComponent implements OnInit {
   ];
   activeUrl: any = [];
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router) {}
   ngOnInit(): void {
     this.activeUrl = this.router.url.split('/').filter((el) => el !== '');
 

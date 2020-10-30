@@ -1,0 +1,10 @@
+@media (min-width: 1200px) {
+  .half {
+    width: calc(50% - 25px);
+  }
+
+  .input-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

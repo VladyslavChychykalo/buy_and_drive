@@ -1,1 +1,77 @@
-<p>create-advertisement-page works!</p>
+<div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Ваше объявление о продаже</h1>
+
+    <div
+      class="form-control"
+      [ngClass]="{
+        invalid: form.get('title').touched && form.get('title').invalid
+      }"
+    >
+      <div class="input-wrapper">
+        <div class="half">
+          <label for="title">Ваше имя:</label>
+          <input id="title" type="text" formControlName="title" />
+        </div>
+
+        <div class="half">
+          <label for="title">Ваша фамилия:</label>
+          <input id="title" type="text" formControlName="title" />
+        </div>
+      </div>
+
+      <div
+        *ngIf="form.get('title').touched && form.get('title').invalid"
+        class="validation"
+      >
+        <small *ngIf="form.get('title').errors.required">
+          Введите название поста
+        </small>
+      </div>
+    </div>
+
+    <div
+      class="form-control"
+      [ngClass]="{
+        invalid: form.get('author').touched && form.get('author').invalid
+      }"
+    >
+      <label for="author">Автор поста:</label>
+      <input id="author" type="text" formControlName="author" />
+      <div
+        *ngIf="form.get('author').touched && form.get('author').invalid"
+        class="validation"
+      >
+        <small *ngIf="form.get('author').errors.required">
+          Введите автора поста
+        </small>
+      </div>
+    </div>
+
+    <div
+      class="form-control"
+      [ngClass]="{
+        invalid: form.get('image').touched && form.get('image').invalid
+      }"
+    >
+      <label for="image">Картинка поста:</label>
+      <input id="image" type="text" formControlName="image" />
+      <div
+        *ngIf="form.get('image').touched && form.get('image').invalid"
+        class="validation"
+      >
+        <small *ngIf="form.get('image').errors.required">
+          Введите адресс картинки
+        </small>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-block btn-dark"
+      [disabled]="form.invalid"
+    >
+      Создать пост
+    </button>
+  </form>
+</div>
